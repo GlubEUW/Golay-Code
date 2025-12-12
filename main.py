@@ -266,13 +266,11 @@ def main():
             
             # Count corrupted vectors and bit errors
             corrupted_with_enc, bit_errors_with_enc = count_corrupted_vectors(text_vectors, decoded_vectors)
-            uncorrectable = sum(1 for v in decoded_vectors if v is None)
             
             reconstructed_text = decoding.reconstruct_text(decoded_vectors)
             
             # Print statistics
             print(f"Corrupted vectors: {corrupted_with_enc}/{len(text_vectors)} ({corrupted_with_enc/len(text_vectors)*100:.2f}%)")
-            print(f"Uncorrectable vectors (4+ errors): {uncorrectable} ({uncorrectable/len(text_vectors)*100:.2f}%)")
             print(f"Total bit errors: {bit_errors_with_enc}")
             print(f"Average bit errors per vector: {bit_errors_with_enc/len(text_vectors):.3f}")
             print("Reconstructed text:")
@@ -332,7 +330,6 @@ def main():
             
             # Count corrupted vectors and bit errors
             corrupted_with_enc, bit_errors_with_enc = count_corrupted_vectors(image_vectors, decoded_vectors)
-            uncorrectable = sum(1 for v in decoded_vectors if v is None)
             
             
             # Reconstruct the image bytes

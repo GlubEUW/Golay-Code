@@ -1,7 +1,8 @@
 # Ataskaita
-## Golay Kodas (A13)
 
 **Autorius:** Mindaugas Kalvinskas
+
+## Golay Kodas (A13)
 
 Realizuotos visos užduoties dalys.
 
@@ -85,19 +86,18 @@ Toks sprendimas gali sudaryti ir pilną baitą, tačiau problemos tai nesukelia.
 
 ## Eksperimento aprašymas
 
-Golėjaus kodas puikiai veikia, kai siunčiamų duomenų iškraipymo tikimybė maža. Tačiau didėjant iškraipymo tikimybei Golėjaus kodas pradeda daryti daugiau klaidų nei jų atsirastų paprasčiausiai siunčiant neužkoduotą tekstą.
+Golėjaus kodas puikiai veikia, kai siunčiamų duomenų iškraipymo tikimybė maža. Tačiau didėjant iškraipymo tikimybei Golėjaus kodas pradeda daryti daugiau klaidų nei jų atsirastų paprasčiausiai siunčiant neužkoduotą tekstą. Eksperimentas sukurtas norint įrodyti tokią hipotezę.
 
-Tokią priklausomybę parodo ir mano eksperimentas.
-Ties p = 15,5 klaidų atsiranda daugiau nei siunčiant duomenis kanalu jų neužkodavus. 
+Eksperimentas buvo vykdomas kaskart siunčiant Bliss.bmp paveiklėlį su vis didėjančia klaidos tikimybę per kanalą ir lyginant klaidų skaičių užkoduotame ir neužkoduotame rezultatuose. P vertės kilo nuo 0.001 po 0.005 (išskryrus pirmąjį kuriame pakilo nuo 0.001 iki 0.005) iki 0.2.
 
-Eksperimentas buvo vykdomas kaskart siunčiant Bliss.bmp paveiklėlį su vis didėjančia klaidos tikimybę per kanalą ir lyginant klaidų skaičių užkoduotame ir neužkoduotame rezultatuose. 
+Ties p = 0,0155 klaidų atsiranda daugiau nei siunčiant duomenis kanalu jų neužkodavus. 
+
 
 ![Eksperimento Grafikas](experiment_graph.png)
 
 Raudona - Procentaliai išreikštas klaidų skaičius
 Mėlyna - Klaidų skaičius
 Žalia - Klaidų skaičius po dekodavimo
-
 
 ## Šaltiniai
 

@@ -115,25 +115,6 @@ def decode_golay_words(vectors):
         decoded_vectors.append(decoded_vector)
     return decoded_vectors
         
-def bits_to_string(binary):
-    """
-    Converts a binary string to text (UTF-8).
-    
-    Parameters:
-        binary: binary string consisting of '0' and '1' characters (str)
-    
-    Returns:
-        decoded text (str)
-    """
-    bytes_list = []
-    for i in range(0, len(binary), 8):
-        byte_chunk = binary[i:i+8]
-        if len(byte_chunk) == 8:
-            bytes_list.append(int(byte_chunk, 2))
-
-    original_text = bytearray(bytes_list).decode('utf-8')
-    return original_text
-
 def reconstruct_text(vectors):
     """
     Reconstructs text from a list of decoded vectors.
